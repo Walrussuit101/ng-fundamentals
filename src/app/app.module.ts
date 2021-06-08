@@ -11,6 +11,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventService } from './events/shared/event.service';
 import { NavBarComponent } from './nav/navbar.component';
+import { CreateEventComponent } from './events/create-event.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { NavBarComponent } from './nav/navbar.component';
     EventsListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
+    CreateEventComponent,
     NavBarComponent
   ],
   providers: [
