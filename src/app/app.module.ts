@@ -53,3 +53,13 @@ export function checkDirtyState(component: CreateEventComponent){
   }
   return true;
 }
+
+/**
+ * in tsconfig.json i had to add:
+ * "strictPropertyInitialization": false
+ * for error: 
+ * "Property has no initializer and is not definitely assigned in the constructor",
+ * 
+ * ideally i would add some kind of `empty interface factory` for each interface so they are always assigned, 
+ * but the tutorial doesn't do this sooooo.. using a work around
+ */
