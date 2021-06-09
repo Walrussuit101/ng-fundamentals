@@ -1,9 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class EventService{
+  
     getEvents(){
-        return EVENTS;
+        let subject = new Subject(); //Subject is a type of observable (stream of values)
+        
+        //simulate an async call using a 100ms timeout
+        setTimeout(() => {
+          subject.next(EVENTS);
+          subject.complete();
+        }, 100);
+
+        return subject;
+    }
+
+    getEvent(id: number){
+      return EVENTS.find(event => event.id === id);
     }
 }
 
